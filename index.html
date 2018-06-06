@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>B_CINEMA</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    </head>
+
+    <body onload="typeWriter()" style="background-color: #000;">
+    	<div class="container-fluid">
+    		<div class="col-md-12 col-xs-12" style="height: 200px;">
+        		<h1 style="color:#fffff6; font-family: 'Roboto', sans-serif; font-size: 72px;" id="bcinema"></h1>
+            </div>
+             <h3 style="color:#333; font-family: 'Roboto', sans-serif; font-size: 36px; text-align: center; display: block;">JUN_15_2018</h3>
+            <div style="text-align: center; display: none;">
+            <iframe id="video" class="lazy" width="560" height="315" src="https://www.youtube.com/embed/hrdtSd0_Dog" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+            <br>
+            <h3 id="jul" style="color:#333; font-family: 'Roboto', sans-serif; font-size: 36px; text-align: center; display: none;">JUL_15_2018</h3>
+            <br>
+            <h3 id="aug" style="color:#333; font-family: 'Roboto', sans-serif; font-size: 36px; text-align: center; display: none;">AUG_15_2018</h3>
+                        <br>
+
+            <h3 id="sep" style="color:#333; font-family: 'Roboto', sans-serif; font-size: 36px; text-align: center; display: none;">SEP_15_2018</h3>
+             <br>
+
+            <h3 id="oct" style="color:#333; font-family: 'Roboto', sans-serif; font-size: 36px; text-align: center; display: none;">OCT_15_2018</h3>
+             <br>
+
+            <h3 id="nov" style="color:#333; font-family: 'Roboto', sans-serif; font-size: 36px; text-align: center; display: none;">NOV_15_2018</h3>
+        </div>
+    </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
+<script>
+var i = 0;
+var txt = 'B_CINEMA';
+var speed = 150;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("bcinema").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+    }
+  if (i == txt.length) {
+    document.getElementById("jul").style.display = "block";
+
+  }
+  if (document.getElementById("jul").style.display == "block") {
+    document.getElementById("aug").style.display = "block";
+
+}
+if (document.getElementById("aug").style.display == "block") {
+    document.getElementById("sep").style.display = "block";
+
+}
+if (document.getElementById("sep").style.display == "block") {
+    document.getElementById("oct").style.display = "block";
+
+}
+if (document.getElementById("oct").style.display == "block") {
+    document.getElementById("nov").style.display = "block";
+
+}
+
+}
+</script>
+<script>
+        $(function() {
+        $('.lazy').lazy({
+          effect: "fadeIn",
+          effectTime: "slow",
+          threshold: 0
+        });
+    });
+             
+</script>
+
+
+</html>

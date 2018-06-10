@@ -1,0 +1,26 @@
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
+
+$(document).ready(function(){
+    $('#ContactFormLight').on('change', function() {
+      if ( this.value == 'Neon')
+      //.....................^.......
+      {
+        $("#NeonColors").show();
+      }
+      else
+      {
+        $("#NeonColors").hide();
+      }
+      if ( this.value == 'LED')
+      //.....................^.......
+      {
+        $("#LedColors").show();
+      }
+      else
+      {
+        $("#LedColors").hide();
+      }
+    });
+});
+  
